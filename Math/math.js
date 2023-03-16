@@ -33,4 +33,25 @@ function calculateTriangle(side1, side2, base, height) {
 
 console.log({baseTriangle, sideTriangle1, sideTriangle2, heightTriangle, trianglePerimeter, triangleArea,});
 
-console.groupEnd('Triangle')
+console.groupEnd('Triangle');
+
+console.group('Circle');
+
+const circleRadius = 3;
+const circleDiameter = circleRadius * 2;
+
+const circlePerimeter = circleDiameter * Math.PI;
+const circleArea = Math.PI * (circleRadius ** 2);
+
+console.log({circleRadius, circleDiameter, circlePerimeter, circleArea,});
+
+function calculateCircle(radio) {
+    const diameter = radio * 2;
+
+    return {
+        perimeter: Math.PI * diameter,
+        area: Math.PI * (Math.pow(radio, 2)),
+    }
+}
+
+console.groupEnd('Circle');
